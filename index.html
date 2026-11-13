@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft Helper — рецепти, поради, моди і шейдери</title>
+  <meta name="description" content="Довідник для гравців Minecraft на ПК: рецепти крафту, поради для виживання, моди, шейдери та зручний пошук.">
+  <meta name="theme-color" content="#2f5f19">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%238a5d3b'/%3E%3Crect width='8' height='3' fill='%235fae3a'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%235fae3a'/%3E%3Crect x='5' y='3' width='2' height='1' fill='%235fae3a'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%235e3d24'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Перейти до вмісту</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="#home" aria-label="Minecraft Helper — на головну">
+        <img class="logo-block px" data-icon="_grassside" alt="">
+        <span class="logo-text">MC<b>Helper</b></span>
+      </a>
+
+      <div class="search" role="search">
+        <img class="search-ico px" data-icon="iron_shovel" alt="">
+        <input id="q" type="search" placeholder="Пошук: кирка, алмази, Sodium, F3…" autocomplete="off" spellcheck="false"
+               aria-label="Пошук по сайту" aria-controls="search-results" aria-expanded="false" aria-autocomplete="list">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+        <div id="search-results" class="search-results panel" role="listbox" hidden></div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Розділи">
+      <a href="#home" data-nav="home" class="pbtn"><img class="px" data-icon="_grassside" alt="">Головна</a>
+      <a href="#recipes" data-nav="recipes" class="pbtn"><img class="px" data-icon="crafting_table" alt="">Рецепти</a>
+      <a href="#survival" data-nav="survival" class="pbtn"><img class="px" data-icon="iron_sword" alt="">Виживання</a>
+      <a href="#mods" data-nav="mods" class="pbtn"><img class="px" data-icon="piston" alt="">Моди</a>
+      <a href="#shaders" data-nav="shaders" class="pbtn"><img class="px" data-icon="lantern" alt="">Шейдери</a>
+    </nav>
+    <div class="grass-edge" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="view" data-view="home" aria-labelledby="home-title"></section>
+    <section class="view" data-view="recipes" aria-labelledby="recipes-title" hidden></section>
+    <section class="view" data-view="survival" aria-labelledby="survival-title" hidden></section>
+    <section class="view" data-view="mods" aria-labelledby="mods-title" hidden></section>
+    <section class="view" data-view="shaders" aria-labelledby="shaders-title" hidden></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-edge" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <p><span class="pixel-font">MC Helper</span> — неофіційний фан-довідник для Minecraft: Java Edition.</p>
+      <p class="muted">Не повʼязаний з Mojang Studios чи Microsoft. Моди та шейдери завантажуй лише з офіційних сторінок (Modrinth, CurseForge, сайти авторів).</p>
+    </div>
+  </footer>
+
+  <dialog id="modal" class="modal panel" aria-labelledby="modal-title"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
